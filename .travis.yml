@@ -1,7 +1,5 @@
 language: java
-arch:
-- amd64
-- ppc64le
+
 script: ./build.sh jar testTravis
 
 cache:
@@ -26,3 +24,20 @@ jobs:
         - "cd h2"
         - "echo $JAVA_OPTS"
         - "export JAVA_OPTS=-Xmx512m"
+    - jdk: openjdk11
+      dist: trusty
+      arch: ppc64le
+      group: edge
+      before_script:
+        - "cd h2"
+        - "echo $JAVA_OPTS"
+        - "export JAVA_OPTS=-Xmx512m"
+    - jdk: oraclejdk8
+      dist: trusty
+      arch: ppc64le
+      group: edge
+      before_script:
+        - "cd h2"
+        - "echo $JAVA_OPTS"
+        - "export JAVA_OPTS=-Xmx512m"
+

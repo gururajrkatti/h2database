@@ -32,6 +32,7 @@ jobs:
         - "cd h2"
         - "echo $JAVA_OPTS"
         - "export JAVA_OPTS=-Xmx512m"
+        - "export JAVA_HOME=/opt/java/openjdk"
     - jdk: oraclejdk8
       dist: trusty
       arch: ppc64le
